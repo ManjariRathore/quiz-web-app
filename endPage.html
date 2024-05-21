@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Ended</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Quiz  Ended</h1>
+     <h1 id="scoreDisplay" class="info-item">Score: 0</h1>
+    <div class="anchorTag-container">
+        <a href="quiz.html" class="end-button">Play Again</a>
+        <a href="index.html" class="end-button">Go Home</a>
+    </div>
+</div>
+<script>
+    const score = localStorage.getItem('quizScore');
+    document.getElementById('scoreDisplay').innerText = `Your score is: ${score}`;
+</script>
+</body>
+</html>
