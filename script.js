@@ -71,7 +71,7 @@ function selectAnswer(selectedIndex, buttonElement) {
 }
 
 function updateScore() {
-    questionNumberElement.innerText = `Question: ${currentQuestionIndex + 2}`;
+    if(currentQuestionIndex!==2)questionNumberElement.innerText = `Question: ${currentQuestionIndex + 2}`;
     scoreElement.innerText = `Score: ${score*10}/30`;
 }
 
