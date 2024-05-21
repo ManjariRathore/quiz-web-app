@@ -65,18 +65,18 @@ function selectAnswer(selectedIndex, buttonElement) {
         if (currentQuestionIndex < questions.length) {
             showQuestion(questions[currentQuestionIndex]);
         } else {
-            endQuiz(score);
+            endQuiz();
         }
     }, 500);
 }
 
 function updateScore() {
     questionNumberElement.innerText = `Question: ${currentQuestionIndex + 2}`;
-    scoreElement.innerText = `Score: ${score}`;
+    scoreElement.innerText = `Score: ${score*10}/30`;
 }
 
-function endQuiz(s) {
-    localStorage.setItem('quizScore', String(score));
+function endQuiz() {
+    localStorage.setItem('quizScore', String(score*10));
     window.location.href = "endPage.html";
 }
 
